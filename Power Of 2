@@ -1,0 +1,21 @@
+class Solution {
+public:
+    bool isPowerOfTwo(int n) {
+
+        ios_base::sync_with_stdio(false);
+        cin.tie(NULL);
+        cout.tie(NULL);
+        
+        if(n>1 and n&1)
+            return false;
+        
+        while(n>1){
+            int rem = n%2;
+            if(rem != 0)
+                return 0;
+            n = n>>1;
+        }
+        return (n==1);
+    }
+    
+};
