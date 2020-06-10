@@ -1,0 +1,17 @@
+class Solution {
+public:
+    int searchInsert(vector<int>& nums, int target) {
+        
+        ios_base::sync_with_stdio(false);
+        cin.tie(NULL);
+        cout.tie(NULL);
+         
+        int i,n = nums.size();
+        for(i=0;i<n;i++){
+            if(nums[i] >= target)
+                return i;
+        }
+        
+        return n;
+    }
+};
