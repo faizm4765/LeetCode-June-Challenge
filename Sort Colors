@@ -1,0 +1,31 @@
+class Solution {
+public:
+    void swap(vector<int>&nums,int i,int j){
+        int t = nums[i];
+        nums[i] = nums[j];
+        nums[j] = t;
+    }
+    
+    void sortColors(vector<int>& nums) {
+        
+        ios_base::sync_with_stdio(false);
+        cin.tie(NULL);
+        cout.tie(NULL);
+        
+        int n = nums.size();
+        int l=0,m=0,h=n-1;  
+        while(m<=h){
+            if(nums[m] == 0){
+                swap(nums,l,m);
+                l++;
+                m++;
+            }
+            else if(nums[m] == 1){
+                m++;
+            }else if(nums[m] == 2){
+                swap(nums,m,h);
+                h--;
+            }
+        }
+    }
+};
