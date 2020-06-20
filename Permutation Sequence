@@ -1,0 +1,18 @@
+class Solution {
+public:
+    Solution(){
+        ios_base::sync_with_stdio(false);
+        cin.tie(NULL);
+        cout.tie(NULL);
+    }
+    string getPermutation(int n, int k) {
+        string res;
+        for(int i=1;i<=n;i++){
+            res += to_string(i);
+        }
+        while(k-- > 1){
+            next_permutation(res.begin(),res.end());
+        }
+        return res;
+    }
+};
